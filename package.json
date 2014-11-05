@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "less": "^2.0.0-b3",
+    "optimist": "^0.6.1",
+    "express": "^4.10.1"
+  }
+}
