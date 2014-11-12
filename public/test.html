@@ -1,0 +1,35 @@
+<html>
+
+<head>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+	<script>
+		function parseRSS(url, container) {
+			$.ajax({
+			    url: document.location.protocol + "//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=" + encodeURIComponent(url),
+			    dataType: 'json',
+			    success: function(data) {
+			        $.each(data.responseData.feed.entries, function(key, value) {
+			        	$(container)
+			        		.append($("<div/>", {class: "bp-container"})
+			        			.append($("<div/>", {class: "bp-title"}).html(value.title))
+			        			.append($("<div/>", {class: "bp-content"}).html(value.content)))
+			        		if (key != data.responseData.feed.entries.length) {
+			        			$(container).append("<br/><br/>");
+			        		}
+			        });
+			    }
+			});
+		}
+		parseRSS(document.location.protocol + "//colonelbylibrary.wordpress.com/feed/?nocache=" + new Date().getTime(), document.body);
+	</script>
+
+
+</body>
+
+</html>
