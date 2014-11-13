@@ -13,6 +13,8 @@
         <link rel="icon" href="favicon.ico" type="image/x-icon"> 
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/easing.css">
+        <link rel="stylesheet" href="css/scrollToTop.css">
         <link href='http://fonts.googleapis.com/css?family=Exo:400,600' rel='stylesheet' type='text/css'>
         <style>
             body {
@@ -32,9 +34,15 @@
         <div id="banner1"></div><div id="banner2"></div>
         <div id= "forban" class="container">
           <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
           <a id="brandmain" class="navbar-brand" href="#"><img id="logo" src="img/brand.png" alt="some_text"></a>
           </div>
-          <div id="fixed" class="navbar-collapse collapse">
+          <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -55,12 +63,6 @@
           </div><!--/.navbar-collapse -->
         </div>
       </div>   
-            <button type="button" id="toggle" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div id="jumbotron-main" class="jumbotron">
         <div class="container">
@@ -101,10 +103,11 @@
       <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
       <script src="js/vendor/bootstrap.min.js"></script>
       <script src="js/main.js"></script>
-      <script>
-          $(document).on('click',function(){
-          $('.collapse').collapse('hide');
-          })
-      </script> 
+      <script src="js/jquery-scrollToTop.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function($) {
+            $('body').scrollToTop({skin: 'cycle'});
+        });
+    </script>
     </body>
 </html>

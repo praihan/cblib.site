@@ -1,3 +1,4 @@
-;(function(undefined) {
+$(document).on('click',function(){
+          $('.collapse').collapse('hide');
+          })
 
-})();

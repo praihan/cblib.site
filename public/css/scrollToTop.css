@@ -1,96 +1,7 @@
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-#mainnav {
-	height: 110px;
-	position: absolute;
-}
-#banner1{
-	background-color: #70D93F;
-	background-size: cover;
-	height: 6px;
-}
-#banner2{
-	background-color: #3F99D9;
-	background-size: cover;
-	height: 6px;
-	margin-top: 104px;
-}
-#forban {
-	margin-top: -80px;
-}
-.navbar-brand {
-	margin-top: -40px;
-	position: absolute;
-}
-#logo {
-	width: auto;
-	height: 75px;
-}
-#jumbotron-main {
-	background-image: url(../img/library-study.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 550px;
-}
-.jumbotron h1, .jumbotron p{
-	color: #fff;
-	text-align: center;
-}
-.jumbotron h1 {
-	font-family: 'Exo', sans-serif;
-	font-weight: 600;
-	margin-top: 100px
-}
-
-
-
-/*Media Query*/
-@media (max-width: 768px) {
-#mainnav {
-	height: 80px;
-	position: absolute;
-}
-#banner1{
-	background-color: #70D93F;
-	background-size: cover;
-	height: 5px;
-}
-#banner2{
-	background-color: #3F99D9;
-	background-size: cover;
-	height: 5px;
-	margin-top: 75px;
-}
-#forban {
-	margin-top: -75px;
-}
-#brandmain {
-	margin-top: -15px;
-	position: absolute;
-}
-#logo {
-	width: auto;
-	height: 50px;
-}	
-#jumbotron-main {
-	height: 400px;
-}
-.jumbotron p{
-	display: none;
-}
-/*End Media Query*/
-
-
-
-
-
-
-/*Scroll to Top
 html {
 	overflow-y: scroll;
 }
-/* core 
+/* core */
 .scrollToTop {
 	position: fixed;
 	right: 20px;
@@ -130,7 +41,7 @@ html {
 	pointer-events: none !important;
 }
 
-/* skin(default) 
+/* skin(default) */
 .scrollToTop {
 	width: 50px;
 	height: 50px;
@@ -158,7 +69,7 @@ html {
 	background-color: #ddd;
 }
 
-/* skin(cycle) 
+/* skin(cycle) */
 .scrollToTop_cycle {
 	background-image: url("../img/cycle.png");
 }
@@ -166,7 +77,7 @@ html {
 	background-image: url("../img/cycle-hover.png");
 }
 
-/* skin(square) 
+/* skin(square) */
 .scrollToTop_square {
 	background-image: url("../img/square.png");
 }
@@ -174,7 +85,7 @@ html {
 	background-image: url("../img/square-hover.png");
 }
 
-/* skin(text) 
+/* skin(text) */
 .scrollToTop_text {
 	background-image: url("../img/text.png");
 }
@@ -182,14 +93,10 @@ html {
 	background-image: url("../img/text-hover.png");
 }
 
-/* skin(triangle) 
+/* skin(triangle) */
 .scrollToTop_triangle {
 	background-image: url("../img/triangle.png");
 }
 .scrollToTop_triangle:hover {
 	background-image: url("../img/triangle-hover.png");
 }
-/*End Scroll to top*/
-
-
-
