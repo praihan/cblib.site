@@ -8,16 +8,18 @@
       $.each(data.responseData.feed.entries, function(key, value) {
         var $events = $("#upcoming-events");
         var eventHref = window.CB.Library.REL_PATH + "/events/#event" + (key + 1);
+        var publishDate = new Date(value.publishedDate);
         $events.addClass("row");
         $events
           .append($("<div/>", {class: COL_MD + " evt-container"})
+            .append($("<h3/>", {class: "evt-date"}).html(window.CB.Library.getMonthString(publishDate.getMonth()) + " " + publishDate.getDate()))
             .append($("<h2/>", {class: "evt-title"})
-              .append($("<a/>", {href: eventHref}).html(value.title)))// .html(value.title))
+              .append($("<a/>", {href: eventHref}).html(value.title.cbTruncate(40))))
             .append($("<p/>", {class: "evt-content"}).html(value.contentSnippet + "..."))
             .append($("<p/>")
               .append($("<a/>", {class: "btn btn-default evt-view-btn", href: eventHref, role: "button"}).html("Read More &raquo;"))))
-          .append($("<br/>"))
-          .append($("<hr/>"));
+          .append($("<br/>", {class: "evt-break"}))
+          .append($("<hr/>", {class: "evt-break"}));
       });
     });
   })

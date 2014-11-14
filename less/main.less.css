@@ -1,6 +1,10 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+@top-banner-color: #70D93F;
+@bottom-banner-color: #3F99D9;
+@nav-dropdown-color: #FFFFFF;
+
 #mainnav {
 	height: 110px;
 	position: absolute;
@@ -55,6 +59,14 @@
 	margin-top: 100px
 }
 
+.evt-title {
+	margin-top: -10px;
+}
+
+.evt-break {
+	display: none;
+}
+
 /* Small screen (phone) stuff */
 @media (max-width: 768px) {
 	#mainnav {
@@ -63,13 +75,13 @@
 	}
 
 	#banner1 {
-		background-color: #70D93F;
+		background-color: @top-banner-color;
 		background-size: cover;
 		height: 5px;
 	}
 
 	#banner2 {
-		background-color: #3F99D9;
+		background-color: @bottom-banner-color;
 		background-size: cover;
 		height: 5px;
 		margin-top: 75px;
@@ -98,7 +110,11 @@
 	}
 
 	#nav-toggle {
-		background-color: #fff;
+		background-color: @nav-dropdown-color;
+	}
+
+	.evt-break {
+		display: block;
 	}
 }
 /*End Media Query*/

@@ -19,7 +19,7 @@
     var inputCssName = argv._[0];
     var outputDirectoryName = argv._[1];
     var outputCssName = inputCssName + (argv["pretty"] ? ".css" : ".min.css");
-    var inputLessName = inputCssName + ".less";
+    var inputLessName = inputCssName + ".less.css";
     var outputFilePath = path.join(outputDirectoryName, outputCssName);
 
     var lessBasePath = path.join(__dirname, "..", "less");

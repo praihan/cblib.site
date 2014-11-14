@@ -19,4 +19,21 @@
     });
   };
 
+  String.prototype.cbTruncate = function(n, useWordBoundary) {
+    if (typeof useWordBoundary == "undefined") {
+      useWordBoundary = true;
+    }
+    var tooLong = this.length > n;
+    var s_ = tooLong ? this.substr(0, n - 1) : this;
+    s_ = useWordBoundary && tooLong ? s_.substr(0, s_.lastIndexOf(" ")) : s_;
+    return tooLong ? s_ + "&hellip;" : s_;
+  };
+
+
+  var monthMap = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  // month index to short string
+  window.CB.Library.getMonthString = function getMonthString(month) {
+    return monthMap[month];
+  }
+
 })(window, document);
