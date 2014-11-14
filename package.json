@@ -1,7 +1,8 @@
 {
   "dependencies": {
-    "less": "^2.0.0-b3",
+    "exec": "^0.1.2",
+    "less": "^2.0.0",
     "optimist": "^0.6.1",
-    "express": "^4.10.1"
+    "express": "^4.10.2"
   }
 }
