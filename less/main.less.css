@@ -4,6 +4,8 @@
 @top-banner-color: #70D93F;
 @bottom-banner-color: #3F99D9;
 @nav-dropdown-color: #FFFFFF;
+@padding-nav: 17px;
+@margin-nav: 18px;
 
 #mainnav {
 	height: 110px;
@@ -11,13 +13,13 @@
 }
 
 #banner1 {
-	background-color: #70D93F;
+	background-color: @top-banner-color;
 	background-size: cover;
 	height: 6px;
 }
 
 #banner2 {
-	background-color: #3F99D9;
+	background-color: @bottom-banner-color;
 	background-size: cover;
 	height: 6px;
 	margin-top: 104px;
@@ -28,7 +30,7 @@
 }
 
 #nav-toggle {
-	font-size: 1.1em;
+	font-size: 20px;
 }
 
 .navbar-brand {
@@ -39,6 +41,42 @@
 #logo {
 	width: auto;
 	height: 75px;
+}
+
+.navbar-nav li a {
+	padding-top: @padding-nav;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-right: @margin-nav;
+	margin-left: @margin-nav;
+}
+
+.navbar-nav .active  a {
+	background-image: url(../img/arrow.svg);
+	background-size: 19px auto;
+	background-repeat: no-repeat;
+	background-position: center 0px;
+	padding-top: @padding-nav;
+}
+
+.navbar-nav li a:hover,
+.dropdown .open li a:hover {
+	border: 1px solid transparent;
+	border-radius: 0px;
+	border-bottom: 1px solid;
+	padding-top: @padding-nav;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+.navbar-nav .active a,
+.navbar-nav .active a:hover,
+.dropdown .open li a {
+	border: 1px solid transparent;
 }
 
 #jumbotron-main {
@@ -71,18 +109,13 @@
 @media (max-width: 768px) {
 	#mainnav {
 		height: 80px;
-		position: absolute;
 	}
 
 	#banner1 {
-		background-color: @top-banner-color;
-		background-size: cover;
 		height: 5px;
 	}
 
 	#banner2 {
-		background-color: @bottom-banner-color;
-		background-size: cover;
 		height: 5px;
 		margin-top: 75px;
 	}
@@ -100,7 +133,19 @@
 		width: auto;
 		height: 50px;
 	}	
+	.navbar-nav .active  a {
+		background-image: none;
+	}
 
+	.navbar-nav li a:hover,
+	.dropdown-menu li a:hover {
+		border-bottom: 1px solid transparent;
+	}
+
+	.navbar-nav .active a,
+	.navbar-nav .active a:hover, {
+		border: 1px solid transparent;
+	}
 	#jumbotron-main {
 		height: 400px;
 	}
