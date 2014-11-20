@@ -43,7 +43,7 @@
 	height: 75px;
 }
 
-.navbar-nav li a {
+.navbar-nav > li > a {
 	padding-top: @padding-nav;
 	padding-bottom: 0px;
 	padding-left: 0px;
@@ -52,7 +52,7 @@
 	margin-left: @margin-nav;
 }
 
-.navbar-nav .active  a {
+.navbar-nav > .active > a {
 	background-image: url(../img/arrow.svg);
 	background-size: 19px auto;
 	background-repeat: no-repeat;
@@ -60,8 +60,7 @@
 	padding-top: @padding-nav;
 }
 
-.navbar-nav li a:hover,
-.dropdown .open li a:hover {
+.navbar-nav > li > a:hover {
 	border: 1px solid transparent;
 	border-radius: 0px;
 	border-bottom: 1px solid;
@@ -73,11 +72,12 @@
     transition: 0.5s ease-in-out;
 }
 
-.navbar-nav .active a,
-.navbar-nav .active a:hover,
-.dropdown .open li a {
+.navbar-nav > .active > a,
+.navbar-nav > .active > a:hover,
+.navbar-nav > li.dropdown.open > a {
 	border: 1px solid transparent;
 }
+
 
 #jumbotron-main {
 	background-image: url(../img/library-study.jpg);
@@ -133,17 +133,17 @@
 		width: auto;
 		height: 50px;
 	}	
-	.navbar-nav .active  a {
+	.navbar-nav > .active > a {
 		background-image: none;
 	}
 
-	.navbar-nav li a:hover,
-	.dropdown-menu li a:hover {
+	.navbar-nav > li > a:hover,
+	.dropdown-menu > li > a:hover {
 		border-bottom: 1px solid transparent;
 	}
 
-	.navbar-nav .active a,
-	.navbar-nav .active a:hover, {
+	.navbar-nav > .active > a,
+	.navbar-nav > .active > a:hover, {
 		border: 1px solid transparent;
 	}
 	#jumbotron-main {
