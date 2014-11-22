@@ -34,4 +34,15 @@
     });
   });
 
+  // contact form validation
+  $(function() {
+
+    $("input,textarea").jqBootstrapValidation();
+
+    $('#name').focus(function() {
+      $('#success').html('');
+    });
+
+  });
+
 })(window, document);
