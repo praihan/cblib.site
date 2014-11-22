@@ -89,10 +89,10 @@
 .jumbotron h1, .jumbotron p {
 	color: #fff;
 	text-align: center;
+	font-family: "Exo", sans-serif;
 }
 
 .jumbotron h1 {
-	font-family: "Exo", sans-serif;
 	font-weight: 600;
 	margin-top: 100px
 }
@@ -103,6 +103,10 @@
 
 .evt-break {
 	display: none;
+}
+
+#con-break {
+	display: block;
 }
 
 /* Small screen (phone) stuff */
@@ -150,7 +154,7 @@
 		height: 400px;
 	}
 
-	.jumbotron p {
+	.jumbotron p > a {
 		display: none;
 	}
 
@@ -160,6 +164,10 @@
 
 	.evt-break {
 		display: block;
+	}
+
+	#con-break {
+		display: none;
 	}
 }
 /*End Media Query*/
