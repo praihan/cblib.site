@@ -3,11 +3,11 @@
   var COL_MD = "col-md-4"
 
   // generate event snippets via rss
-  $(document).ready(function() {
+  $(function() {
     window.CB.Library.parseRSS(document.location.protocol + "//colonelbylibrary.wordpress.com/feed/?nocache=" + new Date().getTime(), function(data) {
       $.each(data.responseData.feed.entries, function(key, value) {
         var $events = $("#upcoming-events");
-        var eventHref = window.CB.Library.REL_PATH + "/events/#event" + (key + 1);
+        var eventHref = window.CB.Library.REL_PATH + "/news/#event" + (key + 1);
         var publishDate = new Date(value.publishedDate);
         $events.addClass("row");
         $events
@@ -25,7 +25,7 @@
   })
 
   // collapsable navbar
-  $(document).ready(function() {
+  $(function() {
     $("#nav-toggle").collapse({
       toggle: false
     });
@@ -34,9 +34,49 @@
     });
   });
 
+  // dropdown animation
+  $(function() {
+    $(".dropdown").on("show.bs.dropdown", function(e) {
+      $(this).find(".dropdown-menu").first().stop(false, false).slideDown(500);
+    });
+    $(".dropdown").on("hide.bs.dropdown", function(e) {
+      // do what would have been done after the animation ends
+      e.preventDefault();
+      var $this = $(this);
+      $this.find(".dropdown-menu").first().stop(false, false).slideUp(500, function() {
+        $this.removeClass("open");
+        $this.find(".dropdown-toggle").first().attr("aria-expanded", "false")
+      });
+    });
+  })
+
+  // smooth scroll for anchors
+  $(function() {
+    $("a[href^='#']").on('click', function(e) {
+      e.preventDefault();
+      var hash = this.hash;
+      var offset = $(this.hash).offset();
+      if (typeof offset !== "undefined") {
+        $('html, body').animate({
+            scrollTop: $(this.hash).offset().top
+          },
+          500,
+          function() {
+            window.location.hash = hash;
+          }
+        );
+      }
+    });
+  })
+
   // contact form validation
   $(function() {
     $("input,textarea").jqBootstrapValidation();
+  });
+
+  // back to top button
+  $(function() {
+    window.CB.Library.scrollToTop(".scroll-to-top");
   });
 
 })(window, document);

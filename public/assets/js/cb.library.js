@@ -19,6 +19,29 @@
     });
   };
 
+  // scroll to top helper
+  window.CB.Library.scrollToTop = function scrollToTop(selector, threshold, duration) {
+    if (typeof threshold === "undefined") {
+      threshold = 100;
+    }
+    if (typeof duration === "undefined") {
+      duration = 800;
+    }
+
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > threshold) {
+        $(selector).fadeIn();
+      } else {
+        $(selector).fadeOut();
+      }
+    });
+
+    $(selector).click(function() {
+      $("html, body").animate({scrollTop : 0}, duration);
+      return false;
+    });
+  }
+
   String.prototype.cbTruncate = function(n, useWordBoundary) {
     if (typeof useWordBoundary == "undefined") {
       useWordBoundary = true;

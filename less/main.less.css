@@ -8,167 +8,192 @@
 @margin-nav: 18px;
 
 #mainnav {
-	height: 110px;
-	position: absolute;
+  height: 110px;
+  position: absolute;
 }
 
 #banner1 {
-	background-color: @top-banner-color;
-	background-size: cover;
-	height: 6px;
+  background-color: @top-banner-color;
+  background-size: cover;
+  height: 6px;
 }
 
 #banner2 {
-	background-color: @bottom-banner-color;
-	background-size: cover;
-	height: 6px;
-	margin-top: 104px;
+  background-color: @bottom-banner-color;
+  background-size: cover;
+  height: 6px;
+  margin-top: 104px;
 }
 
 #forban {
-	margin-top: -87px;
+  margin-top: -87px;
 }
 
 #nav-toggle {
-	font-size: 20px;
+  font-size: 20px;
 }
 
 .navbar-brand {
-	margin-top: -33px;
-	position: absolute;
+  margin-top: -33px;
+  position: absolute;
 }
 
 #logo {
-	width: auto;
-	height: 75px;
+  width: auto;
+  height: 75px;
 }
 
 .navbar-nav > li > a {
-	padding-top: @padding-nav;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
-	margin-right: @margin-nav;
-	margin-left: @margin-nav;
+  padding-top: @padding-nav;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-right: @margin-nav;
+  margin-left: @margin-nav;
 }
 
 .navbar-nav > .active > a {
-	background-image: url(../img/arrow.svg);
-	background-size: 19px auto;
-	background-repeat: no-repeat;
-	background-position: center 0px;
-	padding-top: @padding-nav;
+  background-image: url(../img/arrow.svg);
+  background-size: 19px auto;
+  background-repeat: no-repeat;
+  background-position: center 0px;
+  padding-top: @padding-nav;
 }
 
 .navbar-nav > li > a:hover {
-	border: 1px solid transparent;
-	border-radius: 0px;
-	border-bottom: 1px solid;
-	padding-top: @padding-nav;
-    -webkit-transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out;
-    -ms-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
+  border: 1px solid transparent;
+  border-radius: 0px;
+  border-bottom: 1px solid;
+  padding-top: @padding-nav;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .navbar-nav > .active > a,
 .navbar-nav > .active > a:hover,
 .navbar-nav > li.dropdown.open > a {
-	border: 1px solid transparent;
+  border: 1px solid transparent;
 }
 
 
 #jumbotron-main {
-	background-image: url(../img/library-study.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 550px;
+  background-image: url(../img/library-study.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 550px;
 }
 
 .jumbotron h1, .jumbotron p {
-	color: #fff;
-	text-align: center;
-	font-family: "Exo", sans-serif;
+  color: #fff;
+  text-align: center;
+  font-family: "Exo", sans-serif;
 }
 
 .jumbotron h1 {
-	font-weight: 600;
-	margin-top: 100px
+  font-weight: 600;
+  margin-top: 100px
 }
 
 .evt-title {
-	margin-top: -10px;
+  margin-top: -10px;
 }
 
-.evt-break {
-	display: none;
+.evt-break,
+.smallscreen-break {
+  display: none;
 }
 
-#con-break {
-	display: block;
+.bigscreen-break {
+  display: block;
+}
+
+.scroll-to-top {
+  width: 14px; 
+  height: 14px;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  position:fixed;
+  top: 90%;
+  right: 5%;
+  display: none;
+}
+
+.scroll-to-top:hover {
+  text-decoration: none;
+}
+
+.scroll-to-top:focus {
+  text-decoration: none;
+  outline: none;
 }
 
 /* Small screen (phone) stuff */
 @media (max-width: 768px) {
-	#mainnav {
-		height: 80px;
-	}
+  #mainnav {
+  	height: 80px;
+  }
 
-	#banner1 {
-		height: 5px;
-	}
+  #banner1 {
+    height: 5px;
+  }
 
-	#banner2 {
-		height: 5px;
-		margin-top: 75px;
-	}
+  #banner2 {
+  	height: 5px;
+  	margin-top: 75px;
+  }
 
-	#forban {
-		margin-top: -75px;
-	}
+  #forban {
+  	margin-top: -75px;
+  }
 
-	#brandmain {
-		margin-top: -15px;
-		position: absolute;
-	}
+  #brandmain {
+  	margin-top: -15px;
+  	position: absolute;
+  }
 
-	#logo {
-		width: auto;
-		height: 50px;
-	}	
-	.navbar-nav > .active > a {
-		background-image: none;
-	}
+  #logo {
+  	width: auto;
+  	height: 50px;
+  }	
+  .navbar-nav > .active > a {
+  	background-image: none;
+  }
 
-	.navbar-nav > li > a:hover,
-	.dropdown-menu > li > a:hover {
-		border-bottom: 1px solid transparent;
-	}
+  .navbar-nav > li > a:hover,
+  .dropdown-menu > li > a:hover {
+  	border-bottom: 1px solid transparent;
+  }
 
-	.navbar-nav > .active > a,
-	.navbar-nav > .active > a:hover, {
-		border: 1px solid transparent;
-	}
-	#jumbotron-main {
-		height: 400px;
-	}
+  .navbar-nav > .active > a,
+  .navbar-nav > .active > a:hover, {
+  	border: 1px solid transparent;
+  }
+  #jumbotron-main {
+  	height: 400px;
+  }
 
-	.jumbotron p > a {
-		display: none;
-	}
+  .jumbotron p > a {
+  	display: none;
+  }
 
-	#nav-toggle {
-		background-color: @nav-dropdown-color;
-	}
+  #nav-toggle {
+  	background-color: @nav-dropdown-color;
+  }
 
-	.evt-break {
-		display: block;
-	}
+  .bigscreen-break {
+  	display: none;
+  }
 
-	#con-break {
-		display: none;
-	}
+  .evt-break,
+  .smallscreen-break {
+  	display: block;
+  }
+
 }
 /*End Media Query*/
 

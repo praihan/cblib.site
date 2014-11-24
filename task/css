@@ -1,7 +1,7 @@
 (function() {
 	var exec = require("exec");
 
-	exec(['node', 'task/cssc', 'main', 'public/css'], function(err, out, code) {
+	exec(['node', 'task/cssc', 'main', 'public/assets/css'], function(err, out, code) {
 	  	if (err instanceof Error)
 	    	throw err;
 	  	process.stderr.write(err);
