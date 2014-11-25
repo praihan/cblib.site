@@ -28,7 +28,6 @@
     <div class="ie-hide">
     <![endif]-->
     <div>
-      <div id="top"></div>
       <div id="mainnav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div id="banner1"></div><div id="banner2"></div>
         <div id= "forban" class="container">
@@ -39,24 +38,27 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-          <a id="brandmain" class="navbar-brand" href="/teachers/library"><img id="logo" src="assets/img/brand.png" alt="some_text"></a>
+          <a id="brandmain" class="navbar-brand" href="/teachers/library"><img id="logo" src="assets/img/brand.png" alt="Loading..."></a>
           </div>
           <div id="nav-toggle" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="/teachers/library">Home</a></li>
-            <li><a href="/teachers/library/news">News</a></li>
+            <li class="active"><a href="/teachers/library/">Home</a></li>
+            <li><a href="/teachers/library/news/">News</a></li>
+            <!--
+            <li><a href="/teachers/library/#contact">Contact</a></li>
+            -->
             <li><a href="#contact">Contact</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="/teachers/library/databases">Databases</a></li>
-                <li><a href="/teachers/library/essay-skills">Essay Skills</a></li>
+                <li><a href="/teachers/library/databases/">Databases</a></li>
+                <li><a href="/teachers/library/essay-skills/">Essay Skills</a></li>
                 <li class="divider"></li>
-                <li><a href="/teachers/library/course-links">Course Links</a></li>
-                <li><a href="/teachers/library/policies">Policies</a></li>
+                <li><a href="/teachers/library/course-links/">Course Links</a></li>
+                <li><a href="/teachers/library/policies/">Policies</a></li>
                 <li class="divider"></li>
-                <li><a href="/teachers/library/ebooks">eBooks</a></li>
-                <li><a href="/teachers/library/in-school-catalogue">In-school Catalogue</a></li>
+                <li><a href="/teachers/library/ebooks/">eBooks</a></li>
+                <li><a href="/teachers/library/in-school-catalogue/">In-school Catalogue</a></li>
               </ul>
             </li>
           </ul>
@@ -67,8 +69,8 @@
       <!-- Main jumbotron -->
       <div id="jumbotron-main" class="jumbotron">
         <div class="container">
-          <h1>Welcome to the Library!</h1>
-          <p>Learn about research databases and upcoming events here.</p>
+          <h1 class="text-limit">Welcome to the Library!</h1>
+          <p class="text-contain">Learn about research databases and upcoming events here.</p>
           <p><a class="btn btn-primary btn-lg" href="#content" role="button">Take me there! &raquo;</a></p>
         </div>
       </div>
@@ -166,6 +168,7 @@
       <script src="assets/js/cb.library.js"></script>
       <script src="assets/js/main.js"></script>
       <script src="assets/js/ga.js"></script>
+      <script src="index.js"></script>
     </div>
   </body>
 </html>

@@ -21,7 +21,7 @@
   };
 
   // scroll to top helper
-  window.CB.Library.scrollToTop = function scrollToTop(selector, threshold, duration) {
+  window.CB.Library.scrollToTop = function scrollToTop(selector, onTopCallback, threshold, duration) {
     if (typeof threshold === "undefined") {
       threshold = 100;
     }
@@ -38,7 +38,7 @@
     });
 
     $(selector).click(function() {
-      $("html, body").animate({scrollTop : 0}, duration);
+      $("html, body").animate({scrollTop : 0}, duration, onTopCallback);
       return false;
     });
   }
