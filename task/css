@@ -1,11 +1,11 @@
 (function() {
-	var exec = require("exec");
+    var exec = require("exec");
 
-	exec(['node', 'task/cssc', 'main', 'public/assets/css'], function(err, out, code) {
-	  	if (err instanceof Error)
-	    	throw err;
-	  	process.stderr.write(err);
-	  	process.stdout.write(out);
-	  	process.exit(code);
-	});
+    exec(['node', 'task/cssc', 'main', 'public/assets/css'], function(err, out, code) {
+        if (err instanceof Error)
+            throw err;
+        process.stderr.write(err);
+        process.stdout.write(out);
+        process.exit(code);
+    });
 })()

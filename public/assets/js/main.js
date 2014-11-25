@@ -4,23 +4,25 @@
 
   // generate event snippets via rss
   $(function() {
+    var $e = $("#ajax-spinner");
     window.CB.Library.parseRSS(document.location.protocol + "//colonelbylibrary.wordpress.com/feed/?nocache=" + new Date().getTime(), function(data) {
       $.each(data.responseData.feed.entries, function(key, value) {
-        var $events = $("#upcoming-events");
+        var $event = $("#upcoming-event-" + (key + 1));
         var eventHref = window.CB.Library.REL_PATH + "/news/#event" + (key + 1);
         var publishDate = new Date(value.publishedDate);
-        $events.addClass("row");
-        $events
-          .append($("<div/>", {class: COL_MD + " evt-container"})
-            .append($("<h3/>", {class: "evt-date"}).html(window.CB.Library.getMonthString(publishDate.getMonth()) + " " + publishDate.getDate()))
-            .append($("<h2/>", {class: "evt-title"})
-              .append($("<a/>", {href: eventHref}).html(value.title.cbTruncate(40))))
-            .append($("<p/>", {class: "evt-content"}).html(value.contentSnippet + "..."))
-            .append($("<p/>")
-              .append($("<a/>", {class: "btn btn-default evt-view-btn", href: eventHref, role: "button"}).html("Read More &raquo;"))))
-          .append($("<br/>", {class: "evt-break"}))
-          .append($("<hr/>", {class: "evt-break"}));
+        $event
+          .append($("<h3/>", {"class": "evt-date"}).html(window.CB.Library.getMonthString(publishDate.getMonth()) + " " + publishDate.getDate()))
+          .append($("<h2/>", {"class": "evt-title"})
+            .append($("<a/>", {href: eventHref}).html(value.title.cbTruncate(40))))
+          .append($("<p/>", {"class": "evt-content"}).html(value.contentSnippet + "..."))
+          .append($("<p/>")
+            .append($("<a/>", {"class": "btn btn-default evt-view-btn", href: eventHref, role: "button"}).html("Read More &raquo;")))
+          .append($("<br/>", {"class": "evt-break"}))
+          .append($("<hr/>", {"class": "evt-break"}));
       });
+      $e.hide();
+    }, function() {
+      $e.show();
     });
   })
 
@@ -37,13 +39,13 @@
   // dropdown animation
   $(function() {
     $(".dropdown").on("show.bs.dropdown", function(e) {
-      $(this).find(".dropdown-menu").first().stop(false, false).slideDown(500);
+      $(this).find(".dropdown-menu").first().stop(false, false).slideDown(300);
     });
     $(".dropdown").on("hide.bs.dropdown", function(e) {
       // do what would have been done after the animation ends
       e.preventDefault();
       var $this = $(this);
-      $this.find(".dropdown-menu").first().stop(false, false).slideUp(500, function() {
+      $this.find(".dropdown-menu").first().stop(false, false).slideUp(300, function() {
         $this.removeClass("open");
         $this.find(".dropdown-toggle").first().attr("aria-expanded", "false")
       });

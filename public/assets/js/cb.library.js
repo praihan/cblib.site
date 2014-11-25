@@ -11,10 +11,11 @@
   window.CB.Library.REL_PATH = "/teachers/library";
 
   // rss parsing via google feed api
-  window.CB.Library.parseRSS = function parseRSS(url, callback) {
+  window.CB.Library.parseRSS = function parseRSS(url, callback, beforeSend) {
     $.ajax({
       url: document.location.protocol + "//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=" + encodeURIComponent(url),
       dataType: 'json',
+      beforeSend: beforeSend,
       success: callback
     });
   };
