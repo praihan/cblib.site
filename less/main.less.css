@@ -98,6 +98,7 @@
 
 .jumbotron h1 {
   font-weight: 600;
+  font-size:;
   margin-top: 100px;
 }
 
@@ -150,15 +151,23 @@
               no-repeat;
 }
 
-.text-contain {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow:hidden;
+.show-lt-420 {
+  display: none;
 }
 
-.text-limit {
-  text-overflow: ellipsis;
-  overflow:hidden;
+#librarian-1 {
+  width: 150px;
+  height: 150px;
+}
+
+#librarian-2 {
+  width: 150px;
+  height: 150px;
+}
+
+.img-circle {
+  overflow: hidden;
+  border-radius: 50%;
 }
 
 /* Small screen (phone) stuff */
@@ -203,7 +212,7 @@
   	border: 1px solid transparent;
   }
   #jumbotron-main {
-  	height: 400px;
+  	height: 350px;
   }
 
   .jumbotron p > a {
@@ -226,3 +235,22 @@
 }
 /*End Media Query*/
 
+@media (max-width: 500px) {
+  .jumbotron p {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .hide-lt-420 {
+    display: none;
+  }
+
+  .show-lt-420 {
+    display: block;
+  }
+
+  .font-sm-lt420 {
+    font-size: 0.75em;
+  }
+}

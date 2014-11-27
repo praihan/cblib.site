@@ -15,8 +15,11 @@
           .append($("<p/>", {"class": "evt-content"}).html(value.contentSnippet + "..."))
           .append($("<p/>")
             .append($("<a/>", {"class": "btn btn-default evt-view-btn", href: eventHref, role: "button"}).html("Read More &raquo;")))
-          .append($("<br/>", {"class": "evt-break"}))
-          .append($("<hr/>", {"class": "evt-break"}));
+        if (key + 1 != data.responseData.feed.entries.length) {
+          $event
+            .append($("<br/>", {"class": "evt-break"}))
+            .append($("<hr/>", {"class": "evt-break"}));
+        }
       });
       $e.hide();
     }, function() {
