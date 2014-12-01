@@ -6,6 +6,11 @@
 @nav-dropdown-color: #FFFFFF;
 @padding-nav: 17px;
 @margin-nav: 18px;
+@default-font: "Exo";
+
+* {
+  font-family: @default-font, sans-serif;
+}
 
 .ie-hide {
   display:none;
@@ -93,13 +98,17 @@
 .jumbotron h1, .jumbotron p {
   color: #fff;
   text-align: center;
-  font-family: "Exo", sans-serif;
+  font-family: @default-font, sans-serif;
 }
 
 .jumbotron h1 {
   font-weight: 600;
   font-size:;
   margin-top: 100px;
+}
+
+.text-underline {
+  text-decoration: underline;
 }
 
 .evt-title {
@@ -168,6 +177,15 @@
 .img-circle {
   overflow: hidden;
   border-radius: 50%;
+
+  &-curve {
+    width: 25%; height: auto;
+    float: left;
+    margin-right: 2rem;
+    border-radius: 50%;
+    -webkit-shape-outside: circle();
+    shape-outside: circle();
+  }
 }
 
 /* Small screen (phone) stuff */
