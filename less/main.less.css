@@ -13,10 +13,6 @@ html body * {
   font-family: @default-font, sans-serif;
 }
 
-.text-justify {
-  text-align: justify;
-}
-
 .ie-hide {
   display:none;
 }
@@ -122,8 +118,24 @@ html body * {
   padding-right: @center-text-padding-size;
 }
 
+.center-text-padding-left {
+  padding-left: @center-text-padding-size;
+}
+
+.center-text-padding-right {
+  padding-right: @center-text-padding-size;
+}
+
 .text-underline {
   text-decoration: underline;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-justify * {
+  text-align: justify;
 }
 
 .evt-title {
@@ -266,8 +278,20 @@ html body * {
     padding-right: 0px;
   }
 
+  .center-text-padding-left {
+    padding-left: 0px;
+  }
+
+  .center-text-padding-right {
+    padding-right: 0px;
+  }
+
   .bigscreen-break {
   	display: none;
+  }
+
+  .smallscreen-text-center {
+    text-align: center;
   }
 
   .evt-break,
