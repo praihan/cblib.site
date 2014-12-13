@@ -6,12 +6,17 @@
 @nav-dropdown-color: #FFFFFF;
 @padding-nav: 17px;
 @margin-nav: 18px;
+@center-text-padding-size: 50px;
 @default-font: "Exo";
 
+<<<<<<< HEAD
 
   /*General Styles
   ================================================*/
 * {
+=======
+html body * {
+>>>>>>> origin/master
   font-family: @default-font, sans-serif;
 }
 
@@ -19,30 +24,30 @@
   display:none;
 }
 
-#mainnav {
+.mainnav {
   height: 110px;
   position: absolute;
   padding-top: 0px;
 }
 
-#banner1 {
+.banner1 {
   background-color: @top-banner-color;
   background-size: cover;
   height: 6px;
 }
 
-#banner2 {
+.banner2 {
   background-color: @bottom-banner-color;
   background-size: cover;
   height: 6px;
   margin-top: 104px;
 }
 
-#forban {
+.forban {
   margin-top: -87px;
 }
 
-#nav-toggle {
+.nav-toggle-id {
   font-size: 20px;
 }
 
@@ -51,7 +56,7 @@
   position: absolute;
 }
 
-#logo {
+.logo-id {
   width: auto;
   height: 75px;
 }
@@ -91,6 +96,71 @@
   border: 1px solid transparent;
 }
 
+<<<<<<< HEAD
+=======
+.jumbotron-big {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 550px;
+}
+
+.jumbotron-small {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 350px;
+}
+
+.jumbotron h1, .jumbotron p {
+  color: #fff;
+  text-align: center;
+  font-family: @default-font, sans-serif;
+}
+
+.jumbotron h1 {
+  font-weight: 600;
+  font-size:;
+  margin-top: 100px;
+}
+
+.center-text-padding {
+  padding-left: @center-text-padding-size;
+  padding-right: @center-text-padding-size;
+}
+
+.center-text-padding-left {
+  padding-left: @center-text-padding-size;
+}
+
+.center-text-padding-right {
+  padding-right: @center-text-padding-size;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-justify * {
+  text-align: justify;
+}
+
+.evt-title {
+  margin-top: -10px;
+}
+
+.evt-break,
+.smallscreen-break {
+  display: none;
+}
+
+.bigscreen-break {
+  display: block;
+}
+
+>>>>>>> origin/master
 .scroll-to-top {
   width: 14px; 
   height: 14px;
@@ -213,31 +283,35 @@
 
 /* Small screen (phone) stuff */
 @media (max-width: 768px) {
+<<<<<<< HEAD
   /*General Styles (min width: 768)
   ================================================*/
   #mainnav {
+=======
+  .mainnav {
+>>>>>>> origin/master
   	height: 80px;
   }
 
-  #banner1 {
+  .banner1 {
     height: 5px;
   }
 
-  #banner2 {
+  .banner2 {
   	height: 5px;
   	margin-top: 75px;
   }
 
-  #forban {
+  .forban {
   	margin-top: -75px;
   }
 
-  #brandmain {
+  .brandmain {
   	margin-top: -15px;
   	position: absolute;
   }
 
-  #logo {
+  .logo-id {
   	width: auto;
   	height: 50px;
   }	
@@ -254,6 +328,7 @@
   .navbar-nav > .active > a:hover, {
   	border: 1px solid transparent;
   }
+<<<<<<< HEAD
   /*--------------General styles end--------------*/
 
 
@@ -262,18 +337,44 @@
   ================================================*/
   #jumbotron-main {
   	height: 350px;
+=======
+
+  .jumbotron-big {
+    height: 350px;
+  }
+
+  .jumbotron-small {
+    height: 300px;
+>>>>>>> origin/master
   }
 
   .jumbotron p > a {
   	display: none;
   }
 
-  #nav-toggle {
+  .nav-toggle-id {
   	background-color: @nav-dropdown-color;
+  }
+
+  .center-text-padding {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .center-text-padding-left {
+    padding-left: 0px;
+  }
+
+  .center-text-padding-right {
+    padding-right: 0px;
   }
 
   .bigscreen-break {
   	display: none;
+  }
+
+  .smallscreen-text-center {
+    text-align: center;
   }
 
   .evt-break,
