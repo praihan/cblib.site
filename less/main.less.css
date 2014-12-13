@@ -9,14 +9,10 @@
 @center-text-padding-size: 50px;
 @default-font: "Exo";
 
-<<<<<<< HEAD
 
   /*General Styles
   ================================================*/
 * {
-=======
-html body * {
->>>>>>> origin/master
   font-family: @default-font, sans-serif;
 }
 
@@ -96,8 +92,6 @@ html body * {
   border: 1px solid transparent;
 }
 
-<<<<<<< HEAD
-=======
 .jumbotron-big {
   background-size: cover;
   background-repeat: no-repeat;
@@ -160,7 +154,6 @@ html body * {
   display: block;
 }
 
->>>>>>> origin/master
 .scroll-to-top {
   width: 14px; 
   height: 14px;
@@ -237,6 +230,42 @@ html body * {
   display: block;
 }
 
+.scroll-to-top {
+  width: 14px; 
+  height: 14px;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  position:fixed;
+  top: 90%;
+  right: 5%;
+  display: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+.modal {
+  display:    block;
+  position:   fixed;
+  z-index:    1000;
+  top:        0;
+  left:       0;
+  height:     100%;
+  width:      100%;
+  background: rgba( 255, 255, 255, .8 ) 
+              url("ajax/spinner.gif") 
+              50% 50% 
+              no-repeat;
+}
+
 .show-lt-420 {
   display: none;
 }
@@ -264,32 +293,12 @@ html body * {
     shape-outside: circle();
   }
 }
-/*--------------Homepage styles end--------------*/
-
-
-/*Policies Page Styles
-===================================================*/
-#jumbotron-pol {
-  background-image: url(../img/library-study2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 350px;
-}
-/*  text-align: left;
-  vertical-align: top;
-
-/*--------------Policies styles end--------------*/
-
 
 /* Small screen (phone) stuff */
 @media (max-width: 768px) {
-<<<<<<< HEAD
   /*General Styles (min width: 768)
   ================================================*/
   #mainnav {
-=======
-  .mainnav {
->>>>>>> origin/master
   	height: 80px;
   }
 
@@ -328,16 +337,15 @@ html body * {
   .navbar-nav > .active > a:hover, {
   	border: 1px solid transparent;
   }
-<<<<<<< HEAD
   /*--------------General styles end--------------*/
 
 
 
   /*Home Page Styles (min width: 768)
   ================================================*/
+
   #jumbotron-main {
   	height: 350px;
-=======
 
   .jumbotron-big {
     height: 350px;
@@ -345,7 +353,6 @@ html body * {
 
   .jumbotron-small {
     height: 300px;
->>>>>>> origin/master
   }
 
   .jumbotron p > a {
@@ -383,12 +390,8 @@ html body * {
   }
 
 }
-/*--------------Homepage styles end--------------*/
-
-
 /*End Media Query*/
 
-/*Very Small screen fixes*/
 @media (max-width: 500px) {
   .jumbotron p {
     display: none;
