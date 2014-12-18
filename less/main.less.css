@@ -108,18 +108,6 @@
   height: @jumbotron-small-height;
 }
 
-.jumbotron h1, .jumbotron p {
-  color: #fff;
-  text-align: center;
-  font-family: @default-font, sans-serif;
-}
-
-.jumbotron h1 {
-  font-weight: 600;
-  font-size:;
-  margin-top: 100px;
-}
-
 .center-text-padding {
   padding-left: @center-text-padding-size;
   padding-right: @center-text-padding-size;
@@ -387,7 +375,7 @@
 
 @media (max-width: 580px) {
   .jumbotron h1 {
-    font-size: 1.8em;
+    font-size: 2.0em;
   }
 }
 
