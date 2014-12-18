@@ -8,6 +8,10 @@
 @margin-nav: 18px;
 @center-text-padding-size: 50px;
 @default-font: "Exo";
+@jumbotron-big-height: 500px;
+@jumbotron-small-height: 350px;
+@jumbotron-big-height-mobile: 350px;
+@jumbotron-small-height-mobile: 300px;
 
 
   /*General Styles
@@ -95,13 +99,13 @@
 .jumbotron-big {
   background-size: cover;
   background-repeat: no-repeat;
-  height: 550px;
+  height: @jumbotron-big-height;
 }
 
 .jumbotron-small {
   background-size: cover;
   background-repeat: no-repeat;
-  height: 350px;
+  height: @jumbotron-small-height;
 }
 
 .jumbotron h1, .jumbotron p {
@@ -194,13 +198,6 @@
 
 /*Home Page Styles
 ===================================================*/
-#jumbotron-main {
-  background-image: url(../img/library-study.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 550px;
-}
-
 .jumbotron h1, .jumbotron p {
   color: #fff;
   text-align: center;
@@ -209,7 +206,6 @@
 
 .jumbotron h1 {
   font-weight: 600;
-  font-size:;
   margin-top: 100px;
 }
 
@@ -298,7 +294,7 @@
 @media (max-width: 768px) {
   /*General Styles (min width: 768)
   ================================================*/
-  #mainnav {
+  .mainnav {
   	height: 80px;
   }
 
@@ -344,19 +340,16 @@
   /*Home Page Styles (min width: 768)
   ================================================*/
 
-  #jumbotron-main {
-  	height: 350px;
-
   .jumbotron-big {
-    height: 350px;
+    height: @jumbotron-small-height-mobile;
   }
 
   .jumbotron-small {
-    height: 300px;
+    height: @jumbotron-small-height-mobile;
   }
 
-  .jumbotron p > a {
-  	display: none;
+  .jumbotron > .container > p {
+    display: none;
   }
 
   .nav-toggle-id {
@@ -392,15 +385,23 @@
 }
 /*End Media Query*/
 
-@media (max-width: 500px) {
-  .jumbotron p {
-    display: none;
+@media (max-width: 580px) {
+  .jumbotron h1 {
+    font-size: 1.8em;
   }
 }
 
 @media (max-width: 420px) {
   .hide-lt-420 {
     display: none;
+  }
+
+
+  .jumbotron .btn-lg {
+    padding: 10px 16px;
+    font-size: 12px;
+    line-height: 1.33;
+    border-radius: 6px;
   }
 
   .show-lt-420 {

@@ -1,4 +1,5 @@
 ;(function(window, document, undefined) {
+  "use strict";
 
   if (typeof window.CB === "undefined") {
     window.CB = {};
@@ -7,17 +8,23 @@
     window.CB.Library = {};
   }
 
+  jQuery.cachedScript = function(url, options) {
+    options = jQuery.extend( options || {}, {
+      dataType: "script",
+      cache: true,
+      url: url
+    });
+    return jQuery.ajax(options);
+  };
+
   // relative path from root of website
   window.CB.Library.REL_PATH = "/teachers/library";
 
-  // rss parsing via google feed api
-  window.CB.Library.parseRSS = function parseRSS(url, callback, beforeSend) {
-    $.ajax({
-      url: document.location.protocol + "//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=" + encodeURIComponent(url),
-      dataType: 'json',
-      beforeSend: beforeSend,
-      success: callback
-    });
+  // rss parsing via google feeds api (requires loading google feeds api v1 prior to using this)
+  window.CB.Library.parseRSS = function parseRSS(url, success, beforeSend) {
+    var feed = new window.google.feeds.Feed(url);
+    beforeSend();
+    feed.load(success);
   };
 
   // scroll to top helper

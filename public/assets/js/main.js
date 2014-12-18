@@ -1,5 +1,6 @@
 ;(function(window, document, undefined) {
-
+  "use strict";
+  
   // collapsable navbar
   $(function() {
     $("#nav-toggle").collapse({
@@ -28,7 +29,7 @@
 
   // smooth scroll for anchors
   $(function() {
-    $("a[href^='#']").on('click', function(e) {
+    $("a[href^='#']").on("click", function(e) {
       e.preventDefault();
       var hash = this.hash;
       var offset = $(this.hash).offset();
