@@ -7,11 +7,11 @@
 @padding-nav: 17px;
 @margin-nav: 18px;
 @center-text-padding-size: 50px;
-@default-font: "Exo";
+@default-font: "Exo 2";
 @jumbotron-big-height: 500px;
-@jumbotron-small-height: 350px;
-@jumbotron-big-height-mobile: 350px;
-@jumbotron-small-height-mobile: 300px;
+@jumbotron-small-height: 380px;
+@jumbotron-big-height-mobile: 280px;
+@jumbotron-small-height-mobile: 250px;
 
 
   /*General Styles
@@ -329,7 +329,7 @@
   ================================================*/
 
   .jumbotron-big {
-    height: @jumbotron-small-height-mobile;
+    height: @jumbotron-big-height-mobile;
   }
 
   .jumbotron-small {
