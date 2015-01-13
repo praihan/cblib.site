@@ -2,3 +2,5 @@ npm-debug.log
 **/**/node_modules/
 **/**/Thumbs.db
 **/**/*.onetoc2
+**/**/.picasa.ini
+deploy/
