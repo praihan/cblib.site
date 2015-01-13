@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
@@ -168,7 +169,7 @@
   }
 }
 
-.modal {
+.modal-spinner {
   display:    block;
   position:   fixed;
   z-index:    1000;
@@ -181,6 +182,12 @@
               50% 50% 
               no-repeat;
 }
+
+.modal {
+  overflow: auto;
+  color: #333;
+}
+
 /*--------------General styles end--------------*/
 
 
@@ -234,20 +241,6 @@
     text-decoration: none;
     outline: none;
   }
-}
-
-.modal {
-  display:    block;
-  position:   fixed;
-  z-index:    1000;
-  top:        0;
-  left:       0;
-  height:     100%;
-  width:      100%;
-  background: rgba( 255, 255, 255, .8 ) 
-              url("ajax/spinner.gif") 
-              50% 50% 
-              no-repeat;
 }
 
 .show-lt-420 {

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>News | Colonel By Library</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-image-gallery.min.css">
+    <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/fontawesome/4.2.0/css/font-awesome.min.css">-->
+    <link href="//fonts.googleapis.com/css?family=Exo+2:400,600" rel="stylesheet" type="text/css">
+    <style>
+      body {
+        padding-top: 50px;
+        padding-bottom: 20px;
+      }
+    </style>
+    <link rel="stylesheet" href="../assets/css/main.min.css">
+    <style>
+      .bullet-unindent {
+        margin-left: -20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top mainnav" role="navigation">
+      <div class="banner1"></div><div class="banner2"></div>
+      <div class="container forban">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand brandmain" href="/teachers/library"><img class="logo-id" src="../assets/img/brand.png" alt="Loading..."></a>
+        </div>
+        <div class="navbar-collapse collapse nav-toggle-id">
+          <ul class="nav navbar-nav navbar-right">
+          <li><a href="/teachers/library/">Home</a></li>
+          <li class="active"><a href="/teachers/library/news/">News</a></li>
+          <li><a href="/teachers/library/#contact">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/teachers/library/databases/">Databases</a></li>
+              <li><a href="/teachers/library/essay-skills/">Essay Skills</a></li>
+              <li class="divider"></li>
+              <li><a href="/teachers/library/course-links/">Course Links</a></li>
+              <li><a href="/teachers/library/policies/">Policies</a></li>
+              <li class="divider"></li>
+              <li><a href="/teachers/library/ebooks/">eBooks</a></li>
+              <li><a href="/teachers/library/in-school-catalogue/">In-school Catalogue</a></li>
+              <li class="divider"></li>
+              <li><a href="http://www.colonelby.com/">Colonel By</a></li>
+            </ul>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- dummy jumbotron -->
+    <div class="jumbotron"></div>
+  
+    <!-- Main container -->
+    <div class="container">
+      <div style=""></div>
+      <div class="btn-group" data-toggle="buttons">
+        <button id="start-gallery-button" type="button" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-picture"></i>&nbsp;Launch Image Gallery</button>
+      </div>
+      <div class="row">
+        <div id="images" class="col-md-12"></div>
+      </div>
+    </div>
+    <div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
+      <!-- The container for the modal slides -->
+      <div class="slides"></div>
+      <!-- Controls for the borderless lightbox -->
+      <h3 class="title"></h3>
+      <a class="prev">‹</a>
+      <a class="next">›</a>
+      <a class="close">×</a>
+      <ol class="indicator"></ol>
+      <!-- The modal dialog, which will be used to wrap the lightbox content -->
+      <!--
+      <div class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" aria-hidden="true"><i class="glyphicon glyphicon-remove"></i></button>
+              <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body next"></div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default pull-left prev"><i class="glyphicon glyphicon-chevron-left"></i>&nbsp;Previous</button>
+              <button type="button" class="btn btn-primary next">Next&nbsp;<i class="glyphicon glyphicon-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      -->
+    </div>
+    <div class="container">
+      <hr>
+  
+      <a href="#" class="scroll-to-top"><i class="glyphicon glyphicon-chevron-up"></i></a>
+  
+      <footer>
+        <p>&copy; <a href="//github.com/prshreshtha" target="_blank">Pranjal Raihan</a> &amp; <a href="//github.com/DanielKyr" target="_blank">Daniel Kyrollos</a> 2015</p>
+      </footer>
+    </div> <!-- /container -->
+
+    <div class="modal-spinner" id="ajax-spinner"></div>
+
+    <script type="text/javascript" src="//s3-sa-east-1.amazonaws.com/modernweb/scripts/ModernWeb.min.js"></script>
+    <!--[if IE 9]>
+    <script>ModernWeb.displayBanner();</script>
+    <![endif]-->
+  
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+    <script src="../assets/js/vendor/bootstrap.min.js"></script>
+    <script src="../assets/js/vendor/jquery.blueimp-gallery.min.js"></script>
+    <script src="../assets/js/vendor/bootstrap-image-gallery.min.js"></script>
+    <script src="//www.google.com/jsapi"></script><script>google.load("feeds", "1");</script>
+    <script src="../assets/js/cb.library.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/ga.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
