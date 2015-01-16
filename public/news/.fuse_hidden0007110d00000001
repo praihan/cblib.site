@@ -9,6 +9,8 @@
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-image-gallery.min.css">
     <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/fontawesome/4.2.0/css/font-awesome.min.css">-->
     <link href="//fonts.googleapis.com/css?family=Exo+2:400,600" rel="stylesheet" type="text/css">
     <style>
@@ -68,9 +70,7 @@
     <!-- Main container -->
     <div class="container">
       <div id="content">
-
       </div>
-
       <hr>
   
       <a href="#" class="scroll-to-top"><i class="glyphicon glyphicon-chevron-up"></i></a>
@@ -90,6 +90,8 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
     <script src="../assets/js/vendor/bootstrap.min.js"></script>
+    <script src="../assets/js/vendor/jquery.blueimp-gallery.min.js"></script>
+    <script src="../assets/js/vendor/bootstrap-image-gallery.min.js"></script>
     <script src="//www.google.com/jsapi"></script><script>google.load("feeds", "1");</script>
     <script src="../assets/js/cb.library.js"></script>
     <script src="../assets/js/main.js"></script>

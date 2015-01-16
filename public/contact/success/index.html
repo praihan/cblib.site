@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="5;/teachers/library/">
+    <title>Contact Success | Colonel By Library</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  </head>
+
+  <body>
+    <p>Thank you very much for contacting us. This page will redirect you in <strong><span id="time-counter"></span></strong> seconds.</p>
+    <p style="font-size:0.7em;">If you are not redirected automatically, follow <a href="/teachers/library/">this link</a>.</p>
+    <script>
+      var counter = 1 + 5;
+      var callback = function() {
+        if (--counter == 0) {
+          window.location.href = "/teachers/library/";
+        }
+        document.getElementById("time-counter").innerHTML = "" + (counter);
+      }
+      setInterval(callback, 1e3);
+      callback();
+    </script>
+  </body>
+</html>
