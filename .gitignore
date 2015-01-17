@@ -3,4 +3,5 @@ npm-debug.log
 **/**/Thumbs.db
 **/**/*.onetoc2
 **/**/.picasa.ini
+**/**/*.fuse_*
 deploy/
