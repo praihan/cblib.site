@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="refresh" content="10;/teachers/library/">
     <title>Contact Success | Colonel By Library</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,13 +16,19 @@
     <img src="important-stuff.gif">
     <script>
       var counter = 1 + 10;
+      var textDiv = document.getElementById("time-counter");
       var callback = function() {
         if (--counter == 0) {
           window.location.href = "/teachers/library/";
         }
-        document.getElementById("time-counter").innerHTML = "" + (counter);
+        textDiv.innerHTML = "" + (counter);
       }
-      setInterval(callback, 1e3);
+      var intervalId = setInterval(callback, 1e3);
+      document.onkeydown = function() {
+        clearInterval(intervalId);
+        textDiv.innerHTML = "NEVER! MWAHAHAHAHAHAHAHHA!";
+        document.onkeydown = null;
+      }
       callback();
     </script>
   </body>

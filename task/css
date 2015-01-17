@@ -1,8 +1,9 @@
 (function() {
     var exec = require("exec");
     var path = require("path");
+    var os = require("os");
 
-    exec(["node", path.join(__dirname , "cssc"), "main", path.join(__dirname, "..", "public/assets/css")], function(err, out, code) {
+    exec([(os.platform() === 'win32') ? "node" : "nodejs", path.join(__dirname , "cssc"), "main", path.join(__dirname, "..", "public/assets/css")], function(err, out, code) {
         if (err instanceof Error)
             throw err;
         process.stderr.write(err);
