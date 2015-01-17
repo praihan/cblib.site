@@ -128,21 +128,6 @@
       $("body").append($("<div/>", {
         "style": "display:block;position:fixed;z-index:999;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0)url('assets/img/misc/krf.png')50%90%no-repeat;"
       }));
-      /*
-.modal-spinner {
-  display:    block;
-  position:   fixed;
-  z-index:    1000;
-  top:        0;
-  left:       0;
-  height:     100%;
-  width:      100%;
-  background: rgba( 255, 255, 255, .8 ) 
-              url("ajax/spinner.gif") 
-              50% 50% 
-              no-repeat;
-}
-      */
       ee.code = function(){};
     }
     ee.load();
