@@ -24,7 +24,7 @@ The official **git** repository for the Colonel By Library website.
 
 ### License
 
-This project is licensed under a zlib style license. You can find a copy of the terms in the [`LICENSE`](LICENSE) file.
+This project is licensed under a zlib style license. You can find a copy of the terms in the [`LICENSE`](COPYING) file.
 
 ***
 
@@ -100,7 +100,7 @@ This section will provide a reference to important file types and extensions in 
 
 ### Appending to PATH
 
-NOTE: Linux programs usually automatically make themselves accessible from the terminal. Only continue reading if you face a problem with executing. You should not append to PATH on Linux but simply create a symbolic link (or symlink). Read more at the links provided below.
+NOTE: Linux user, Linux programs usually automatically make themselves accessible from the terminal. Only continue reading if you face a problem with executing. You should not append to PATH on Linux but simply create a symbolic link (or symlink). Read more at the links provided below.
 
 To append to `PATH` means being able to access all executables from the directory that is to be appended from the command line without having to specify the location of the executable. 
 
