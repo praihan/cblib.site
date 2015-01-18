@@ -61,7 +61,7 @@ After you have installed all the dependencies including the node-specific ones, 
 
 		node task/serve <port>
 
-	`<port>` just represents a port number, choose one that is not `80` and try again. However this time you will have to specify the port in the URL. Try `localhost:<port>/teachers/library/` where `<port>` is the number you used. If you are still unsuccessful, seek assistance from the interwebs (namely stackoverflow) or someone who knows about this stuff.
+	`<port>` just represents a port number, choose one that is not `80` and try again. However this time you will have to specify the port in the URL. Try `localhost:<port>/teachers/library/` where `<port>` is the number you used. If you are still unsuccessful, seek assistance from the interwebs (namely stackoverflow) or someone who knows about this stuff (or try to figure it out yourself).
 
 ***
 
@@ -72,6 +72,12 @@ After you have installed all the dependencies including the node-specific ones, 
 		node task/deploy
 		
 	If this completes successfully, then you will find a folder called `deploy` in the root folder. This folder is a clone of the `public` folder where all `html`, `css`, and `js` files are minified.
+
+* Now you can create a server for the deployed version by executing:
+
+		node task/serve-deploy
+		
+	This task follows behaves the same way as `task/serve` so check out the section in [Usage](#usage) on how to use it to its full extent or if you are having problems with it.
 
 ***
 
