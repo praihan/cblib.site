@@ -14,6 +14,7 @@ The official **git** repository for the Colonel By Library website.
 	* [License](#license)
     * [Installation](#installation)
     * [Usage](#usage)
+    * [Deploying](#deploying)
     * [Contributing](#contributing)
     * [Issues](#issues)
     * [File Types](#file-types)
@@ -64,9 +65,31 @@ After you have installed all the dependencies including the node-specific ones, 
 
 ***
 
+### Deploying
+
+* Open a command prompt or terminal at the root directory of the repository and execute:
+
+		node task/deploy
+		
+	If this completes successfully, then you will find a folder called `deploy` in the root folder. This folder is a clone of the `public` folder where all `html`, `css`, and `js` files are minified.
+
+* Firstly make sure all the dependencies installed correctly. If not you can try to host at a different port. You can do so like:
+
+		node task/serve <port>
+
+	`<port>` just represents a port number, choose one that is not `80` and try again. However this time you will have to specify the port in the URL. Try `localhost:<port>/teachers/library/` where `<port>` is the number you used. If you are still unsuccessful, seek assistance from the interwebs (namely stackoverflow) or someone who knows about this stuff.
+
+***
+
 ### Contributing
 
 To make contributions, firstly fork this repository. There is a fork button somewhere on the GitHub repository page. You will see that there is a copy of this repository under your own GitHub account. Do stuff there, all the usual stuff like bug fixes or improvements. Then send a pull request and someone will review the code and merge it.
+
+To change the main user styles, open `less/main.less.css` and make the appropriate changes. Then in the root folder, execute:
+
+	node task/css
+
+You can even change the entire Bootstrap theme! To do this, experiment with the usage of `task/themec`.
 
 Make sure you also include your name information in both `package.json` and `CONTRIBUTORS`.
 
