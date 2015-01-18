@@ -1,4 +1,21 @@
 {
+  "name": "cblib.site",
+  "version": "0.1.0",
+  "description": "The source code of Colonel By Secondary School's library website",
+  "author": "Pranjal Raihan <prshreshtha@yahoo.com>",
+  "contributors": [
+    {
+      "name": "Daniel Kyrollos",
+      "email": "daniel.g.kyrollos@hotmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prshreshtha/cblib.site"
+  },
+  "bugs": {
+    "url": "https://github.com/prshreshtha/cblib.site/issues"
+  },
   "dependencies": {
     "exec": "^0.1.3",
     "less": "^2.2.0",
@@ -8,5 +25,6 @@
     "wrench": "^1.5.8",
     "html-minifier": "^0.6.9",
     "node-minify": "^1.0.1"
-  }
+  },
+  "license": "zlib"
 }
