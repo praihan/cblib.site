@@ -73,12 +73,6 @@ After you have installed all the dependencies including the node-specific ones, 
 		
 	If this completes successfully, then you will find a folder called `deploy` in the root folder. This folder is a clone of the `public` folder where all `html`, `css`, and `js` files are minified.
 
-* Firstly make sure all the dependencies installed correctly. If not you can try to host at a different port. You can do so like:
-
-		node task/serve <port>
-
-	`<port>` just represents a port number, choose one that is not `80` and try again. However this time you will have to specify the port in the URL. Try `localhost:<port>/teachers/library/` where `<port>` is the number you used. If you are still unsuccessful, seek assistance from the interwebs (namely stackoverflow) or someone who knows about this stuff.
-
 ***
 
 ### Contributing
