@@ -62,7 +62,7 @@
           $this.attr("placeholder", REPEAT.repeat(Math.ceil(attr.length / REPEAT.length)).substring(0, attr.length));
         });
 
-        $("#start-tour").unbind().html("PACMAN &raquo;").click(function() {
+        $("#start-tour").unbind().html("PLS NO CLICK &raquo;").click(function() {
           $("#pacman-modal").modal({
             backdrop: "static",
             keyboard: false
