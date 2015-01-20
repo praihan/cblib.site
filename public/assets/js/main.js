@@ -25,7 +25,7 @@
         $this.find(".dropdown-toggle").first().attr("aria-expanded", "false")
       });
     });
-  })
+  });
 
   // smooth scroll for anchors
   $(function() {
@@ -44,7 +44,7 @@
         );
       }
     });
-  })
+  });
 
   // back to top button
   $(function() {
