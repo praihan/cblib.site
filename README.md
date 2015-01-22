@@ -25,7 +25,7 @@ The official **git** repository for the Colonel By Library website.
 
 ### License
 
-This project is licensed under a zlib style license. You can find a copy of the terms in the [`LICENSE`](COPYING) file.
+This project is licensed under a zlib style license. You can find a copy of the terms in the [`COPYING`](COPYING) file.
 
 ***
 
