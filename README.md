@@ -49,7 +49,11 @@ This command installs all the node dependencies in a new folder called `node_mod
 
 ### Usage
 
-After you have installed all the dependencies including the node-specific ones, continue with the following. You will have to use the `node` command so make sure it is [appended to PATH](#appending-to-path). (NOTE: Linux users, sometimes the `node` command does not exist, in this case you will have to use `nodejs` instead).
+After you have installed all the dependencies including the node-specific ones, continue with the following. You will have to use the `node` command so make sure it is [appended to PATH](#appending-to-path).
+
+NOTE: Linux users, sometimes the `node` command does not exist, in this case you will have to use `nodejs` instead. However if you wish to use simply `node`. You can do the following:
+
+	sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 * Open a command prompt or terminal at the root directory of the repository and execute:
 
