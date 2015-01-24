@@ -95,7 +95,7 @@ To change the main user styles, open `less/main.less.css` and make the appropria
 
 You can even change the entire Bootstrap theme! To do this, experiment with the usage of `task/themec`.
 
-Make sure you also include your name information in both `package.json` and `CONTRIBUTORS`.
+Make sure you also include your name information in both [`package.json'](package.json) and [`CONTRIBUTORS`](CONTRIBUTORS).
 
 ***
 
