@@ -106,7 +106,7 @@
             intro: "Welcome to the tour! We hope to show you a little bit of what you can do on this website."
           },
           {
-            element: "#upcoming-events",
+            element: "#news-snippet",
             intro: "Short snippets of the most <i>recent news</i> and <i>upcoming events</i> are posted here. You can <b>click</b> on each to explore further."
           },
           {
