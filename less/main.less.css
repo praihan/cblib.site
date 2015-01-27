@@ -138,6 +138,10 @@
   margin-top: -10px;
 }
 
+.evt-content {
+  word-wrap: break-word;
+}
+
 .evt-break,
 .smallscreen-break {
   display: none;

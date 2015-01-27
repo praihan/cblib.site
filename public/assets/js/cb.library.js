@@ -20,11 +20,16 @@
   // relative path from root of website
   window.CB.Library.REL_PATH = "/teachers/library";
 
-  // rss parsing via google feeds api (requires loading google feeds api v1 prior to using this)
+  // rss parsing via deployed heroku app
   window.CB.Library.parseRSS = function parseRSS(url, success, beforeSend) {
-    var feed = new window.google.feeds.Feed(url);
-    beforeSend();
-    feed.load(success);
+    $.ajax({
+      type: "GET",
+      url: document.location.protocol + "//morning-springs-7937.herokuapp.com/feed/?url=" + url,
+      cache: false,
+      dataType: "json",
+      beforeSend: beforeSend,
+      success: success
+    });
   };
 
   // scroll to top helper
