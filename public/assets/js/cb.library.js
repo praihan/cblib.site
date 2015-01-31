@@ -24,7 +24,7 @@
   window.CB.Library.parseRSS = function parseRSS(url, success, beforeSend) {
     $.ajax({
       type: "GET",
-      url: document.location.protocol + "//morning-springs-7937.herokuapp.com/feed/?url=" + url,
+      url: document.location.protocol + "//cblib-backend.herokuapp.com/feed/?url=" + url,
       cache: false,
       dataType: "json",
       beforeSend: beforeSend,
