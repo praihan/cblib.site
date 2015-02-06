@@ -276,6 +276,24 @@
   }
 }
 
+.footer-socmed {
+  text-align: center;
+  font-size: 20px;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+.footer-socmed > a {
+  display: inline-block;
+  margin: 0 10px;
+  color: inherit;
+  opacity: 0.5;
+}
+.footer-socmed > a:hover,
+.footer-socmed > a:focus {
+  color: inherit;
+  opacity: 1;
+}
+
 /* Small screen (phone) stuff */
 @media (max-width: 768px) {
   /*General Styles (min width: 768)

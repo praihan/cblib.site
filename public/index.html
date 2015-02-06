@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/intro.js/1.0.0/introjs.min.css">
-    <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/fontawesome/4.2.0/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/fontawesome/4.2.0/css/font-awesome.min.css">
     <link href="//fonts.googleapis.com/css?family=Exo+2:400,600" rel="stylesheet" type="text/css">
     <style>
       @font-face {
@@ -89,16 +89,19 @@
       <div id="about">
         <fieldset><legend>Meet the Librarians</legend></fieldset>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6 collapse-group">
             <img id="librarian-1" class="img-circle img-circle-curve" src="assets/img/librarian-1.jpg" alt="Loading...">
-            <p class="text-underline"><strong>Ms. Librarian-One</strong></p>
-            <p>This is kiwifruit: originally called “yang tao”, “melonette” and Chinese gooseberry. Cultivated in its fuzzy variety from Chinese imports, the fruit proved popular with American military servicemen stationed in New Zealand during World War II, with commercial export to the United States starting after the end of the war.</p>
+            <p class="text-underline"><strong>Mme. Tricia Leduc</strong></p>
+            <p>Greetings CB Cougars, I am the Teacher-Librarian! Everyone is welcome to come discuss school work in the library, from research paths, to citing sources I will be happy to assist you when you stop by the library. Please check out our Twitter <a href="#">@colbylibrary</a> and our Facebook page <a href="#">Colonel By Library</a>!  We will keep you updated with news about books, films and world events!</p>
+            <p class="collapse">My teaching background is in the Canadian and World Studies Dept. with much of my focus being Geography, Civics, History and Law. As an immersion teacher know that I can help with any of your french work as well. I will be joining the IB teachers in coordinating and supervising Extended Essays, among other things. Do not be surprised when your class comes to the library - I will often be collaborating with your teachers on assignments and be teaching various lessons to you.</p>
+            <p><a class="btn show-more" href="#">Show More &raquo;</a></p>
           </div>
           <br class="evt-break">
+          <br class="smallscreen-break">
           <div class="col-md-6">
-            <img id="librarian-2" class="img-circle img-circle-curve" src="assets/img/librarian-1.jpg" alt="Loading...">
-            <p class="text-underline"><strong>Ms. Librarian-Two</strong></p>
-            <p>This is kiwifruit: originally called “yang tao”, “melonette” and Chinese gooseberry. Cultivated in its fuzzy variety from Chinese imports, the fruit proved popular with American military servicemen stationed in New Zealand during World War II, with commercial export to the United States starting after the end of the war.</p>
+            <img id="librarian-2" class="img-circle img-circle-curve" src="assets/img/librarian-2.jpg" alt="Loading...">
+            <p class="text-underline"><strong>Mrs. Smith</strong></p>
+            <p> I have been working in both elementary and high school libraries for about 2 decades but I started out as an emergency nurse. Need help printing or photocopying? Can't decide on a book to read or a can't find a reference? I’m in the Library every morning and over lunch to help you. By all means, come on in if just to watch the fish, enjoy chess or complete your homework. Everyone is welcome!</p>
           </div>
         </div>
       </div>
@@ -168,7 +171,7 @@
 
       <a href="#" class="scroll-to-top"><i class="glyphicon glyphicon-chevron-up"></i></a>
 
-      <div id="pacman-modal" class="modal fade">
+      <div id="p-modal" class="modal fade">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -176,7 +179,7 @@
               <h4 class="modal-title">Y U CLICK???</h4>
             </div>
             <div class="modal-body">
-              <div id="pacman-container" style="width:100%;height:auto;"></div>
+              <div id="p-container" style="width:100%;height:auto;"></div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -186,6 +189,10 @@
       </div><!-- /.modal -->
 
       <footer>
+        <div class="footer-socmed">
+          <a href="#" target="_blank"><span class="fa fa-facebook"></span></a>
+          <a href="#" target="_blank"><span class="fa fa-twitter"></span></a>
+        </div>
         <p>&copy; <a href="//github.com/prshreshtha" target="_blank">Pranjal Raihan</a> &amp; <a href="//github.com/DanielKyr" target="_blank">Daniel Kyrollos</a> 2015. Source tree on <a href="//github.com/prshreshtha/cblib.site" target="_blank">GitHub</a></p>
       </footer>
     </div> <!-- /container -->

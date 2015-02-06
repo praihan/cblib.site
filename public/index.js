@@ -3,7 +3,6 @@
     "use strict";
 
     // generate event snippets via rss
-    
     $(function() {
       var $e = $("#ajax-spinner");
       // var url = document.location.protocol + "//colonelbylibrary.wordpress.com/feed/?nocache=" + new Date().getTime();
@@ -46,13 +45,22 @@
       $("#start-tour").click(tourCallback);
     });
 
+    // show more dropdown
+    $(".show-more").on("click", function(e) {
+      e.preventDefault();
+      var $this = $(this);
+      var $collapse = $this.closest(".collapse-group").find(".collapse");
+      $this.html($collapse.hasClass("in") ? "Show More &raquo;" : "&laquo; Show Less");
+      $collapse.collapse("toggle");
+    });
+
     // lol
     $(function() {
       var ee = new Konami();
       var REPEAT = "hue ";
       ee.code = function() {
         $("span,a,legend,p,button,td,strong,i,b,h1,h2,h3,h4,h5,h6").each(function() {
-          $(this).not("footer p,footer a,footer span,p:has(#start-tour),#start-tour,#pacman-modal *").each(function() {
+          $(this).not("footer p,footer a,footer span,p:has(#start-tour),#start-tour,#p-modal *").each(function() {
             var innerText = this.innerText;
             if (typeof innerText === "undefined") {
               return;
@@ -70,7 +78,7 @@
         });
 
         $("#start-tour").unbind().html("PLS NO CLICK &raquo;").click(function() {
-          $("#pacman-modal").modal({
+          $("#p-modal").modal({
             backdrop: "static",
             keyboard: false
           });
@@ -78,11 +86,13 @@
 
         
         
-        var pacman;
-        $("#pacman-modal").on("shown.bs.modal", function() {
-          if (!pacman) {
-            pacman = window.PACMAN();
-            pacman.init(document.getElementById("pacman-container"), "./assets/");
+        var p;
+        var f = String.fromCharCode;
+        var a = [f(80), f(65), f(67), f(77), f(65),f(78)];
+        $("#p-modal").on("shown.bs.modal", function() {
+          if (!p) {
+            p = window[a.join("")]();
+            p.init(document.getElementById("p-container"), "./assets/");
           }
         });
 
