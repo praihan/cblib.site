@@ -295,7 +295,7 @@
 }
 
 /* Small screen (phone) stuff */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   /*General Styles (min width: 768)
   ================================================*/
   .mainnav {
@@ -339,7 +339,9 @@
   }
   /*--------------General styles end--------------*/
 
+}
 
+@media (max-width: 768px) {
 
   /*Home Page Styles (min width: 768)
   ================================================*/
@@ -414,5 +416,16 @@
 
   .font-sm-lt420 {
     font-size: 0.75em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .nav, .navbar-nav {
+    background-color: #fff;
+    width: 100% !important;
+  }
+
+  .navbar-collapse {
+    overflow: visible !important;
   }
 }

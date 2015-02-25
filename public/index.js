@@ -145,8 +145,16 @@
             intro: "Click on this one to view a more detailed page about recent <b>news</b> and <b>upcoming events</b>."
           },
           {
+            element: ".databasesbutton-id",
+            intro: "Check out all the research databases like <b>JSTOR</b> or <b>Gale Infotrac</b> that the school has to offer."
+          },
+          {
+            element: ".essayskillsbutton-id",
+            intro: "If you ever need help with fixing up an essay, check this out."
+          },
+          {
             element: ".resourcesbutton-id",
-            intro: "You can find some cool resources from this dropdown such as <b><i>Research Databases</i></b>, <b><i>Library Policies</i></b>, <b><i>In-school Catalogue</i></b> and much more!</ul></span>"
+            intro: "You can find some cool essential links from this dropdown!"
           },
           {
             element: ".jumbotron",

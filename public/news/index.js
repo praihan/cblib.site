@@ -33,7 +33,7 @@
     $("#gallery").nanoGallery({
       kind: "flickr",
       userID: "129159678@N02", // colonelbylibrary@yahoo.ca
-      photoset: "72157650261755380",
+      photoset: "72157651028825531",
       thumbnailWidth: 165,
       thumbnailHeight: 110,
       thumbnailHoverEffect: "labelSlideUp,borderLighter",

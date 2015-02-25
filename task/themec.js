@@ -1,6 +1,6 @@
 (function() {
     var optimist = require("optimist")
-        .usage("Usage:\n  compile_less [--pretty] <theme_name> <out_dir>\n\n" +
+        .usage("Usage:\n  compile_less [--pretty] <out_dir> <theme_name>\n\n" +
         "\tout_dir\t\t:\tOutput directory relative to cwd" +
         "\ttheme_name\t:\tName of theme (e.g. 'readable')\n"
         )
