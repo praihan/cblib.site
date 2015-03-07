@@ -22,7 +22,7 @@
         "background-size": "auto"
       });
       $("body").append($("<div/>", {
-        "style": "display:block;position:fixed;z-index:999;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0)url('../assets/img/misc/krf.png')50%90%no-repeat;"
+        "style": "display:block;position:fixed;z-index:999;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0)url('../assets/img/misc/dank.gif')50%90%no-repeat;"
       }));
       ee.code = function(){};
     }
