@@ -153,6 +153,10 @@
             intro: "If you ever need help with fixing up an essay, check this out."
           },
           {
+            element: ".technologybutton-id",
+            intro: "Need to borrow an iPad or a Chromebook from the library?  This page can help!"
+          },
+          {
             element: ".resourcesbutton-id",
             intro: "You can find some cool essential links from this dropdown!"
           },
