@@ -1,1 +1,0 @@
-(function(window,document,undefined){"use strict";$(window).load(function(){$("#ajax-spinner").hide()})})(window,document);
