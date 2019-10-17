@@ -25,26 +25,66 @@ var Konami = function (callback) {
 			}
 		},
 		input: "",
-		pattern: "38384040373937396665",
+        pattern: "38384040373937396665",
+        //bonobo: "667978796679",
+        //memes: "68657875",
+        //roham: "7465666573846968",
+        //doomsday: "657676657285136575666582",
 		load: function (link) {
 			this.addEvent(document, "keydown", function (e, ref_obj) {
 				if (ref_obj) konami = ref_obj; // IE
 				konami.input += e ? e.keyCode : event.keyCode;
-				if (konami.input.length > konami.pattern.length)
-					konami.input = konami.input.substr((konami.input.length - konami.pattern.length));
+				/*if (konami.input.length > konami.pattern.length)
+					konami.input = konami.input.substr((konami.input.length - konami.pattern.length));*/
 				if (konami.input == konami.pattern) {
 					konami.code(link);
 					konami.input = "";
-					e.preventDefault();
+                    e.preventDefault();
 					return false;
 				}
+                /*else if (konami.input == konami.bonobo) {
+					konami.code2(link);
+					konami.input = "";
+                    e.preventDefault();
+					return false;
+				}
+                else if (konami.input == konami.roham) {
+                    konami.code3(link);
+                    konami.input = "";
+                    e.preventDefault();
+                    return false;
+                }
+                else if (konami.input == konami.memes) {
+                    konami.code4(link);
+                    konami.input = "";
+                    e.prevenDefault();
+                    return false;
+                }
+                else if (konami.input == konami.doomsday) {
+                    konami.codeD(link);
+                    konami.input = "";
+                    e.preventDefault();
+                    return false;
+                }*/
 			}, this);
-			this.iphone.load(link);
+			//this.iphone.load(link);
 		},
 		code: function (link) {
 			window.location = link
 		},
-		iphone: {
+        code2: function (link) {
+            window.location = link
+        },
+        code3: function (link) {
+            window.location = link
+        },
+        code4: function (link) {
+            window.location = link
+        },
+        /*codeD: function (link) {
+            window.location = link
+        },*/
+		/*iphone: {
 			start_x: 0,
 			start_y: 0,
 			stop_x: 0,
@@ -92,12 +132,16 @@ var Konami = function (callback) {
 					this.code(link);
 				}
 			}
-		}
+		}*/
 	}
 
 	typeof callback === "string" && konami.load(callback);
 	if (typeof callback === "function") {
 		konami.code = callback;
+        konami.code2 = callback;
+        konami.code3 = callback;
+        konami.code4 = callback;
+        //konami.codeD = callback;
 		konami.load();
 	}
 

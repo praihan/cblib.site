@@ -5,8 +5,8 @@
     // generate event snippets via rss
     $(function() {
       var $e = $("#ajax-spinner");
-      // var url = document.location.protocol + "//colonelbylibrary.wordpress.com/feed/?nocache=" + new Date().getTime();
-      var url = document.location.protocol + "//colonelbylibrary.wordpress.com/feed/";
+      // var url = document.location.protocol + "https://cblibraryblog.wordpress.com/feed/?nocache=" + new Date().getTime();
+      var url = document.location.protocol + "//cblibraryblog.wordpress.com/feed/";
       window.CB.Library.parseRSS(url, function(data) {
         for (var key = 0; key < data.length; ++key) {
           var value = data[key];
@@ -57,8 +57,8 @@
     // lol
     $(function() {
       var ee = new Konami();
-      var REPEAT = "hue ";
-      ee.code = function() {
+      var REPEAT = "hue";
+      ee.code = function() {          
         $("span,a,legend,p,button,td,strong,i,b,h1,h2,h3,h4,h5,h6").each(function() {
           $(this).not("footer p,footer a,footer span,p:has(#start-tour),#start-tour,#p-modal *").each(function() {
             var innerText = this.innerText;
@@ -75,6 +75,62 @@
           var $this = $(this);
           var attr = $this.attr("placeholder");
           $this.attr("placeholder", REPEAT.repeat(Math.ceil(attr.length / REPEAT.length)).substring(0, attr.length));
+        });
+
+        $("#start-tour").unbind().html("PLS NO CLICK &raquo;").click(function() {
+          $("#p-modal").modal({
+            backdrop: "static",
+            keyboard: false
+          });
+        });
+
+        
+        var p;
+        var f = String.fromCharCode;
+        var a = [f(80), f(65), f(67), f(77), f(65),f(78)];
+        $("#p-modal").on("shown.bs.modal", function() {
+          if (!p) {
+            p = window[a.join("")]();
+            p.init(document.getElementById("p-container"), "./assets/");
+          }
+        });
+
+        $("img").each(function() {
+          this.src = "assets/img/misc/k.png";
+        });
+        $(".jumbotron-big,.jumbotron-small").css({
+          "background-image": "url(assets/img/misc/k.png)",
+          "background-repeat": "repeat",
+          "background-size": "auto"
+        });
+        $("body").append($("<div/>", {
+          "style": "pointer-events:none;display:block;position:fixed;z-index:999;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0)url('assets/img/misc/dank.gif')50%90%no-repeat;"
+        }));
+        ee.code = function(){};
+      }
+      
+      
+      ee.code2 = function() {
+        var audio = new Audio('assets/audio/DA TING GO SKRRRAAA.mp3');
+        audio.loop = true;
+        audio.play();
+          
+        $("span,a,legend,p,button,td,strong,i,b,h1,h2,h3,h4,h5,h6").each(function() {
+          $(this).not("footer p,footer a,footer span,p:has(#start-tour),#start-tour,#p-modal *").each(function() {
+            var innerText = this.innerText;
+            if (typeof innerText === "undefined") {
+              return;
+            }
+            var len = innerText.length;
+            if (innerText.trim().length !== 0) {
+              this.innerText = "R" + "E".repeat(innerText.length).substring(0, innerText.length);
+            }
+          });
+        });
+        $("[placeholder]").each(function() {
+          var $this = $(this);
+          var attr = $this.attr("placeholder");
+          $this.attr("placeholder", "R" + "E".repeat(attr.length).substring(0, attr.length));
         });
 
         $("#start-tour").unbind().html("PLS NO CLICK &raquo;").click(function() {
@@ -105,13 +161,99 @@
           "background-size": "auto"
         });
         $("body").append($("<div/>", {
-          "style": "pointer-events:none;display:block;position:fixed;z-index:999;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0)url('assets/img/misc/dank.gif')50%90%no-repeat;"
+          "style": "pointer-events:none;display:block;position:fixed;z-index:999;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0)url('assets/img/misc/bronzecrank.gif')50%90%no-repeat;"
         }));
-        ee.code = function(){};
+        ee.code2 = function(){};
       }
+      
+      ee.code3 = function() {
+        var audio = new Audio('assets/audio/Roham.mp3');
+        audio.loop = true;
+        audio.play();
+          
+        $("span,a,legend,p,button,td,strong,i,b,h1,h2,h3,h4,h5,h6").each(function() {
+          $(this).not("footer p,footer a,footer span,p:has(#start-tour),#start-tour,#p-modal *").each(function() {
+            var innerText = this.innerText;
+            if (typeof innerText === "undefined") {
+              return;
+            }
+            var len = innerText.length;
+            if (innerText.trim().length !== 0) {
+              this.innerText = "Y" + "O".repeat(innerText.length).substring(0, innerText.length);
+            }
+          });
+        });
+        $("[placeholder]").each(function() {
+          var $this = $(this);
+          var attr = $this.attr("placeholder");
+          $this.attr("placeholder", "Y" + "O".repeat(attr.length).substring(0, attr.length));
+        });
+
+        $("#start-tour").unbind().html("PLS NO CLICK &raquo;").click(function() {
+          $("#p-modal").modal({
+            backdrop: "static",
+            keyboard: false
+          });
+        });
+        
+        var p;
+        var f = String.fromCharCode;
+        var a = [f(80), f(65), f(67), f(77), f(65),f(78)];
+        $("#p-modal").on("shown.bs.modal", function() {
+          if (!p) {
+            p = window[a.join("")]();
+            p.init(document.getElementById("p-container"), "./assets/");
+          }
+        });
+
+        $("img").each(function() {
+          this.src = "assets/img/misc/Rovern.jpg";
+        });
+        $(".jumbotron-big,.jumbotron-small").css({
+          "background-image": "url(assets/img/misc/Rovern.jpg)",
+          "background-repeat": "repeat",
+          "background-size": "auto"
+        });
+        $("body").append($("<div/>", {
+          "style": "pointer-events:none;display:block;position:fixed;z-index:999;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0)url('assets/img/misc/Top 10.gif')50%90%no-repeat;"
+        }));
+        ee.code3 = function(){};
+      }
+      
+      ee.code4 = function() {
+        /*var audio = new Audio('assets/audio/Spongebob.mp3');
+        audio.play();*/
+        
+        var Sponge = document.getElementById("blackscreen");
+        
+        Sponge.style.display = "block";
+        Sponge.style.background = "rgba(255,255,255,1)";
+        
+        
+        $("body").append($("<div/>", {
+          "style": "pointer-events:none;display:block;position:absolute;z-index:1501;top:0px;left:900px;width:450px;height:300px;background:rgba(0,0,0,0)url('assets/img/misc/Spongebob.gif')50%90%no-repeat;"
+        }));
+        
+        ee.code4 = function(){};
+      }
+      
+      /*ee.codeD = function() {
+        var audio = new Audio('assets/audio/Spongebob.mp3');
+        audio.play();
+        
+        var Sponge = document.getElementById("blackscreen");
+          
+        $("body").append($("<div/>", {
+          "style": "pointer-events:none;display:block;position:fixed;z-index:1400;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0)url('assets/img/misc/Spongebob.gif')50%90%no-repeat;"
+        }));
+          
+        setInterval(function() {Sponge.style.display = "block";},3000);
+        
+        ee.codeD = function(){};
+      }*/
       ee.load();
     });
-
+      
     function tourCallback() {
       var introjs = introJs();
       introjs.setOptions({

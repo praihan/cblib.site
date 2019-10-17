@@ -5,7 +5,7 @@
   $(function() {
     var $e = $("#ajax-spinner");
     // var url = document.location.protocol + "//colonelbylibrary.wordpress.com/feed/?nocache=" + new Date().getTime();
-    var url = document.location.protocol + "//colonelbylibrary.wordpress.com/feed/";
+    var url = document.location.protocol + "//cblibraryblog.wordpress.com/feed/";
     window.CB.Library.parseRSS(url, function(data) {
       for (var key = 0; key < data.length; ++key) {
         var value = data[key];
